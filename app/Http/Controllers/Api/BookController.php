@@ -16,7 +16,7 @@ class BookController extends Controller
     public function index()
     {
         // Obtener todos los libros y precargar la relación 'author' para evitar el problema N+1.
-        $books = Book::with('author')->paginate(5);
+        $books = Book::with('author')->paginate(6);
 
         // Devolver una colección de BookResource
         return BookResource::collection($books);
