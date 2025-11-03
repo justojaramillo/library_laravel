@@ -7,7 +7,7 @@ use App\Http\Controllers\Api\LoanController;
 use Illuminate\Support\Facades\Route;
 
 ## public api routes
-Route::post('login',[AuthController::class, 'login']);
+Route::post('/login',[AuthController::class, 'login']);
 Route::get('books', [BookController::class, 'index']);
 Route::get('books/{book}', [BookController::class, 'show']);
 Route::get('authors', [AuthorController::class, 'index']);
